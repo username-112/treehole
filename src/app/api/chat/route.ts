@@ -40,7 +40,7 @@ export async function POST(req: Request) {
 
     const stream = await client.chat.completions.create({
       model: 'deepseek-chat',
-      messages: plainMessages,
+      messages: plainMessages as any,
       stream: true,
     });
 
